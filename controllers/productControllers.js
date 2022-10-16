@@ -18,7 +18,7 @@ exports.getSingleProduct = async (req, res, next) => {
     try {
         const product = await Product.findById(req.params.id)
 
-        if (!product) return next({})
+        if (!product) return next({ message: "something is not good", status: 404 })
 
         res.status(200).json({
             success: true,
