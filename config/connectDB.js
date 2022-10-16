@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
-// name: shahil pass: Ojateq7SdjXwTv4A (ecommerce_packProgra)
-const DB_URI = "mongodb+srv://shahil:Ojateq7SdjXwTv4A@cluster0.1jksoip.mongodb.net/ecommerce?retryWrites=true&w=majority"
+// name: shahil pass: mviHfbofCNCCiYiO (ecommerce_packProgra)
+const DB_URI = "mongodb+srv://shahil:mviHfbofCNCCiYiO@cluster0.4tt0sex.mongodb.net/practice?retryWrites=true&w=majority"
+
 const connectDatabase = () => {
-    console.log("connecting");
     try {
         mongoose
             .connect(DB_URI)
