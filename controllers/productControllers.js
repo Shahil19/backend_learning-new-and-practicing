@@ -1,4 +1,5 @@
 const Product = require("../models/productModel.js")
+const ErrorHandler = require("../utils/errorHandler.js")
 
 // Get all products
 exports.getAllProduct = async (req, res) => {
@@ -18,7 +19,7 @@ exports.getSingleProduct = async (req, res, next) => {
     try {
         const product = await Product.findById(req.params.id)
 
-        if (!product) return next({ message: "something is not good", status: 404 })
+        if (!product) return next(new ErrorHandler("not good", 404))
 
         res.status(200).json({
             success: true,
